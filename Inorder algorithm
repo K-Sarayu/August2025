@@ -1,0 +1,19 @@
+class Node:
+  def __init__(self,val):
+    self.left=None
+    self.data=val
+    self.right=None
+root=Node(1)
+root.left=Node(3)
+root.right=Node(4)
+root.right.left=Node(10)
+root.left.right=Node(5)
+root.left.right.left=Node(7)
+
+def Inorder(root):
+  if(root==None):
+    return
+  Inorder(root.left)
+  print(root.data)
+  Inorder(root.right)
+Inorder(root)
